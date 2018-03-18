@@ -5,7 +5,7 @@ div.p2 {text-align:center;
         color:white;
 		border:1px solid #2F4F4F;
 		background-color:#2F4F4F;
-		padding: 25px 0px 25px 0px;
+		padding: 25px 0px 15px 0px;
 		}
 div.p6 {
 		box-sizing: border-box;    
@@ -21,23 +21,31 @@ div.p1  {text-align:center;
 
  
 input[type=text] {color:#3c3c3c;
-                  width: 50%;
+                  width: 60%;
                   padding: 12px 20px;
-				  background-color:white}
+				  background-color:white;
+                                   border-radius:5px;
+                                   margin:3px}
 input[type=password] {color:#3c3c3c;
-                  width: 50%;
+                  width: 60%;
                   padding: 12px 20px;
-				  background-color:white}
+				  background-color:white;
+	                          border-radius:5px;
+	                          margin:3px}
 input[ type=email] {color:#3c3c3c;
-                  width: 50%;
+                  width: 60%;
                   padding: 12px 20px;
-				  background-color:white}
+				  background-color:white;
+	                          border-radius:5px;
+	                          margin:3px}
 input[type=button]{text-align:center;
                    padding-top:10px;
 				   padding-bottom:10px;
-				   width:50%;
+				   width:60%;
 				   background-color:#008B8B;
 				   color:white;
 				   border: 1px solid #008B8B;
-				   font-size:18px}
+				   font-size:18px;
+	                           border-radius:5px;
+	                           margin:3px}
 div.p3 { text-align:center}
