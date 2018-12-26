@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title> FORM </title>
+<link rel="stylesheet" href="{% static 'css/base.css'%}">
+</head>
+<body>
+<div class="p2"><h1><b> Linked&nbsp<div class="p6">in</div></b></h1></div>
+{% block content %}
+
+<div class="p1"><p><b> Join to view full profiles for free!!</b></p></div>
+<br>
+<form align="center" action="" method="POST">
+{% csrf_token %}
+<input type="text" name="username" placeholder="Username"><br>
+<input type="text" name="first_name" placeholder="First name"><br>
+<input type="text" name="last_name" placeholder="Last name"><br>
+<input type="email" name="email" placeholder="Email"><br>
+<input type="password" name="password1" placeholder="Password"><br>
+<input type="password" name="password2" placeholder="Confirm password"><br>
+<div class="p3"><p>By clicking Join now, you agree to Linkedin<b> User Agreement, Privacy Policy,</b> and <b> Cookie Policy.</b></p></div><br>
+<B><input type="submit" value="Join now"></B><br>
+<div class="p20"><p>Already have an account? <B><a href="{% url "login" %}">Sign in</a></B></p></div>
+</form>
+
+{% endblock %}
+</body>
+
+</html>
