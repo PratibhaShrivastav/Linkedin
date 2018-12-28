@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import login,authenticate,logout
 from .forms import Signupform
+from django.core.mail import send_mail
+from django.conf import settings
 from django.http import HttpResponse,HttpResponseRedirect
 from django.urls import reverse
 from django.utils.encoding import force_bytes
@@ -24,15 +26,15 @@ def signup(request):
             user.save()
             current_site = get_current_site(request)
             subject = 'Activate Your MySite Account'
+            recipient_list=[form.data['email'],]
+            print(recipient_list)
             message = render_to_string('account_activation_email.html', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            print(message)
-            result = user.email_user(subject, message)
-            print(result)
+            result = send_mail(subject, message,settings.EMAIL_HOST_USER,recipient_list)
             return redirect('account_activation_sent')
         else:
             messages.warning(request,"Form has some errors: either the passwords don't match , weak password or invalid email address")
