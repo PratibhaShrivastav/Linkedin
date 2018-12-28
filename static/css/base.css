@@ -54,18 +54,18 @@ input[type=submit]{
 				   text-align:center;
                    padding-top:10px;
 				   padding-bottom:10px;
-				   width:60%;
+				   width:55%;
+				   margin-left: 4%;
 				   background-color:#008B8B;
 				   color:white;
 				   border: 1px solid #008B8B;
 				   font-size:18px;
 	               border-radius:5px;
-				   margin:3px;
 				}
 
 #login {
 	width: 30%;
-	margin-left: 15%;
+	margin-left: 17%;
 }
 div.p3 {
 	margin-left: 5%;

@@ -2,6 +2,15 @@
 
 {% block content %}
 
+<div class="text-center">
 <h1> Welcome </h1>
+<br>
+{% if user.is_authenticated %}
+    <h3><a class="btn btn-danger" href="{% url 'logout' %}">
+        Logout
+    </a>
+    </h3>
+</div>
+{% endif %}
 
 {% endblock %}

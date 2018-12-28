@@ -5,7 +5,7 @@
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <title> FORM </title>
-<link rel="stylesheet" href="{% static 'css/base.css'%}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
 <div class="p2"><h1><b> Linked&nbsp<div class="p6">in</div></b></h1></div>
@@ -24,6 +24,11 @@
 <div class="p3"><p>By clicking Join now, you agree to Linkedin<b> User Agreement, Privacy Policy,</b> and <b> Cookie Policy.</b></p></div><br>
 <B><input type="submit" value="Join now"></B><br>
 <div class="p20"><p>Already have an account? <B><a href="{% url "login" %}">Sign in</a></B></p></div>
+{% if messages %} 
+{% for message in messages %}
+    <h3 style="color:red"> {{message}} </h3>
+{% endfor %}
+{% endif %}
 </form>
 
 {% endblock %}

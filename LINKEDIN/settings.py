@@ -125,3 +125,5 @@ STATICFILES_DIRS=(
 )
 
 APPEND_SLASH=False
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
